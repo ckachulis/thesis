@@ -1,0 +1,30 @@
+\section{Event Selection}
+\label{sec:event_selection}
+A cut based selection is used to select electron elastic-scatter-like events.  The selection begins with the FCFV sample, which consists of all events which pass the Fully-Contained event reduction, plus four additional cuts: wall$>$200 cm, which defines the fiducial volume, nhitac$<$16, evis$>$30 MeV, and if the event is 1-ring elike, the final cut amome$>$100 MeV.  From this FCFV sample, 4 analysis cuts are applied: \\
+\\
+\indent 
+1. 1-ring\\
+\indent
+2. e-like\\
+\indent
+3. 0 decay electrons\\
+\indent
+4. 0 tagged neutrons\\
+\\
+ 
+The first two cuts search for the single relativistic scatter from an electron elastic scatter, while the final two cuts remove events with any indication of a nuclear interaction.  The number of events found in all SK-IV after each cut is shown for three different energy ranges in \ref{tab:cut_counts}   The neutron tagging ut plays an important role in background reduction, particularly in the high energy sample, as can be seen in \cref{tab:cut_counts}.  It's inclusion limits the current analysis to SK-IV only, since neutron tagging is not possible on SK-I-III data.
+\begin{table*}
+\begin{tabular}{lccc}
+\hline \hline
+& Evis$<$1.33 GeV & 1.33 GeV$<$Evis$<$20 GeV & 20 GeV$<$ Evis \\
+\hline
+FCFV & 15206 & 4908 & 97 \\
+and single ring & 11367 & 2868 & 53 \\
+and e-like & 5655 & 1514 & 53 \\
+and 0 decay-e & 5176 & 1134 & 17 \\
+and 0 tagged neutrons & 4132 & 683 & 4 \\
+\hline 
+\end{tabular}
+\caption{Number of events in SK4 data passing each cut for 3 energy ranges.}
+\label{tab:cut_counts}
+\end{table*}

@@ -1,0 +1,183 @@
+%***************************************************
+% begin preamble
+
+%------------------------------------------
+% declare the document class
+
+% uncomment for one-sided...
+%\documentclass[psfig,12pt,oneside,openright]{report}
+\documentclass[12pt,oneside,openright]{report}
+
+% uncomment for two-sided...
+%\documentclass[psfig,12pt,twoside,openright]{report}
+%------------------------------------------
+
+%------------------------------------------
+% uncomment to compile only one chapter
+%\includeonly{results/results}
+%------------------------------------------
+
+% packages used
+\input{preamble/packages}
+
+% formatting specifications
+\input{preamble/formatting}
+
+% shorthand notations
+\input{preamble/shorthands}
+
+% make a list of files used
+\listfiles
+
+% make the index
+\makeindex
+
+% end preamble
+%***************************************************
+
+%***************************************************
+% begin document
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% for rough drafts only!!!
+%\pagestyle{empty}
+%\today
+%\newpage
+%\mbox{}
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%===================================================
+% begin header section
+
+%------------------------------------------
+% page numbering
+
+% page number at bottom
+\pagestyle{plain}
+
+% use roman numbers
+\pagenumbering{roman}
+
+% set to page 1
+\setcounter{page}{1}
+%------------------------------------------
+
+% title page
+\include{header/title}
+\newpage
+
+% signatures
+\include{header/signatures}
+\newpage
+
+%------------------------------------------
+% set to page 3
+\setcounter{page}{3}
+%------------------------------------------
+
+% acknowledgements
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\include{header/acknowledge}
+\newpage
+
+% abstract
+\addcontentsline{toc}{chapter}{Abstract}
+\include{header/abstract}
+\newpage
+
+% table of contents
+\addcontentsline{toc}{chapter}{Table of Contents}
+\tableofcontents
+\newpage
+
+% list of tables
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+\newpage
+
+% list of figures
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+\newpage
+
+% list of abbreviations
+\addcontentsline{toc}{chapter}{List of Abbreviations}
+\include{header/abbreviations}
+\newpage
+
+% end header section
+%===================================================
+
+%===================================================
+% begin body section
+
+%------------------------------------------
+% page numbering
+
+% page number at top corner
+\pagestyle{myheadings}
+
+% use arabic numbers
+\pagenumbering{arabic}
+
+% set to page 1
+\setcounter{page}{1}
+%------------------------------------------
+
+% introduction
+\include{intro/intro}
+
+% motivation & theory
+\include{theory/theory}
+
+\include{Boosted_dm/boosted_dm}
+%===================================================
+
+%===================================================
+% begin appendix section
+\begin{appendix}
+
+
+
+\end{appendix}
+% end appendix section
+%===================================================
+
+%===================================================
+% begin bibliography section
+
+% make bib
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{bibliography}
+\newpage
+
+% set bib style
+%\bibliographystyle{nar}
+\bibliographystyle{asskickular}
+
+% end bibliography section
+%===================================================
+
+%------------------------------------------
+% make index
+\printindex
+%------------------------------------------
+
+%===================================================
+% begin CV section
+
+% curriculum vitae
+\addcontentsline{toc}{chapter}{Curriculum Vitae}
+\input{cv/cv}
+
+% end CV section
+%===================================================
+
+% ...and that's a wrap!
+\end{document}
+% end the document
+%***************************************************

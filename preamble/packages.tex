@@ -1,0 +1,104 @@
+%===================================================
+% packages
+
+%---------------------------------------------------
+% graphics, figures, and tables
+
+% graphics package
+%\usepackage[dvips]{graphicx}
+\usepackage{graphicx}
+
+
+% eps formatted figures
+%\usepackage{epsfig}
+
+% subfigures
+\usepackage{subfigure}
+
+% captions
+\usepackage[hang,small,bf]{caption}
+
+% feynman diagrams
+\usepackage{feynmp}
+\DeclareGraphicsRule{*}{mps}{*}{} 
+% rotate figures, captions, and tables
+\usepackage{rotating}
+
+\usepackage{dcolumn}
+% multi-row and multi-col spacing in tables
+\usepackage{multirow,multicol}
+
+% footnotes in tables
+\usepackage{threeparttable}
+
+% multi-page tables
+\usepackage{longtable,supertabular}
+%---------------------------------------------------
+
+%---------------------------------------------------
+% formatting & textual
+
+% for multi-line commenting
+\usepackage{verbatim}
+
+% index package
+\usepackage{makeidx}
+
+% color text
+\usepackage{color}
+
+% mathematical fonts
+\usepackage{amssymb}
+
+% mathematical formulas
+\usepackage[centertags]{amsmath}
+
+\usepackage{mathtools}
+
+
+% indent first paragraph of section
+\usepackage{indentfirst}
+
+% control line spacing
+\usepackage{setspace}
+
+% add space, e.g. at the end of textual macros
+\usepackage{xspace}
+
+% customize enumeration
+\usepackage{enumerate}
+
+\usepackage[noabbrev,capitalize]{cleveref}
+\usepackage{appendix}
+\RequirePackage{luatex85}
+\usepackage{luatex85}
+\def\pgfsysdriver{pgfsys-pdftex.def}
+\usepackage{tikz-feynman}
+\tikzfeynmanset{compat=1.0.0} 
+\usepackage{adjustbox}
+%---------------------------------------------------
+
+%---------------------------------------------------
+% bibliography
+
+% nicer alternative to \cite
+\usepackage[numbers,sort&compress]{natbib}
+
+% hyper-referenced citation
+\usepackage{hypernat}
+%---------------------------------------------------
+
+%---------------------------------------------------
+% hyper-references
+
+% main hyper-reference package
+\usepackage[linktocpage=true,
+            pdfstartview={FitH},
+            linkbordercolor={0 0 1},
+            bookmarks=true,
+            bookmarkstype=toc=true,
+            bookmarksnumbered=true]{hyperref}
+
+% fix reference pointing to figures and tables
+\usepackage[all]{hypcap}
+%---------------------------------------------------

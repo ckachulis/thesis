@@ -1,0 +1,184 @@
+%===================================================
+% formatting
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Official BU Thesis Formatting (as of May 2010):
+% Top Margin: 1.5in to top of first line of text or heading
+% Left Margin: 1.5in
+% Right Margin: 1in (may be justified)
+% Bottom Margin: 1in to the bottom of the last line of text
+%                or as close as possible
+% Line Spacing: double-spaced
+% Number of Sides: single-sided
+% Font Size: at least 10 point (11 for Times New Roman)
+% Page Numbering-->
+%   Roman: bottom center of page, 0.75in to the bottom of
+%          the numeral
+%   Arabic: top center or top right of page, 1in to the top
+%           of the numeral
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-----------------------------------------------------------------------
+% line spacing
+
+% set to double spaced
+\doublespacing
+
+%-----------------------------------------------------------------------
+
+%-----------------------------------------------------------------------
+% top margin
+
+% 'topmargin' is measured from 1in from the top of the page.
+% In this thesis, the header is used to create space at
+% the top of the page, so set topmargin to -1in.
+\setlength{\topmargin}{-1.0in}
+
+% height of the header: 1in
+\setlength{\headheight}{1.0in}
+
+% distance between the header and the text: 0.5in
+\setlength{\headsep}{0.5in}
+
+%-----------------------------------------------------------------------
+
+%-----------------------------------------------------------------------
+% left margin
+
+% The left margin is defined separately for odd
+% and even numbered pages. NOTE: The right margin
+% is determined by the left margin and text block
+% size.
+
+% '___sidemargin' is measured from 1in from the left
+% edge of the page.
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% The following is for the official format-->
+
+% left margin for odd numbered pages: 1.5in - 1in = 0.5in
+\setlength{\oddsidemargin}{0.5in}
+
+% left margin for even numbered pages: 1.5in - 1in = 0.5in
+\setlength{\evensidemargin}{0.5in}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% The following is for a nice two-sided print-->
+
+% left margin for odd numbered pages: 1.5in - 1in = 0.5in
+%\setlength{\oddsidemargin}{0.5in}
+
+% left margin for even numbered pages: 1in - 1in = 0in
+%\setlength{\evensidemargin}{0in}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+%-----------------------------------------------------------------------
+
+%-----------------------------------------------------------------------
+% size of text block
+
+% width of text block:
+% 8.5in (page width) - 1.5in (left margin) - 1in (right margin) = 6in
+\setlength{\textwidth}{6in}
+
+% height of text block:
+% 11in (page height) - 1.5in (top margin) - 1in (bottom margin) = 8.5in
+\setlength{\textheight}{8.5in}
+
+%-----------------------------------------------------------------------
+
+%-----------------------------------------------------------------------
+% bottom margin
+
+% The top margin and text block size have already
+% determined the bottom margin size. All that's
+% left is the space between the text block and
+% the footer.
+
+% Set space between text and footer
+\setlength{\footskip}{0.25in}
+
+%-----------------------------------------------------------------------
+
+%-----------------------------------------------------------------------
+% figures & stuff
+
+% LATEX will only put text and a figure on the same page if the figure 
+% covers less than ``floatpagefraction'' of the page. If it can't work 
+% things out, the figures will float to the end. To allow smaller text 
+% sections and get more figures in the right place you can adjust the 
+% cuts LATEX uses. The first three should be equal to each other and 
+% less than 0.95. The last should be 1-floatpagefraction. If you get 
+% errors like ``too many unresolved floats'' try adjusting these values 
+% or removing the [thb] specs. from your \begin{figure}'s
+
+\renewcommand\floatpagefraction{0.80}
+\renewcommand\topfraction{0.80}
+\renewcommand\bottomfraction{0.80}
+\renewcommand\textfraction{0.20}
+
+%-----------------------------------------------------------------------
+
+%-----------------------------------------------------------------------
+% headings
+
+% Redefine chapter & appendix headings to be smaller than default.
+%\def\chaptername{\Large\bf Chapter}
+%\def\appendixname{\Large\bf Appendix}
+
+\begin{comment}
+% section headings
+\renewcommand{\section}{\@startsection
+  {section}%                   % name
+  {1}%                         % level
+  {0mm}%                       % indent
+  {-\baselineskip}%            % before skip
+  {0.5\baselineskip}%          % after skip
+  {\normalfont\large\itshape}  % style
+}
+
+% chapter headings
+% numbered chapters...
+\renewcommand{\@makechapterhead}[1]{%          % level(?)
+  \vspace*{50\p@}                              % vert. space
+  {\parindent \z@ \raggedright \normalfont     % ?
+   \hrule                                      % horiz. line
+   \vspace{5pt}%                               % vert. space
+   \ifnum \c@secnumdepth >\m@ne                % check depth
+     \huge\scshape \@chapapp\space \thechapter % Ch. number
+     \par\nobreak                              % ?
+     \vskip 20\p@                              % ?
+   \fi                                         % 
+   \interlinepenalty\@M                        % ?
+   \Huge \scshape #1\par                       % Ch. title
+   \vspace{5pt}%                               % vert. space
+   \hrule                                      % horiz. line
+   \nobreak                                    % ?
+   \vskip 40\p@                                % ?
+  }
+}
+% unnumbered chapters...
+\renewcommand{\@makeschapterhead}[1]{%
+  \vspace*{50\p@}
+  {\parindent \z@ \raggedright \normalfont
+   \hrule
+   \vspace{5pt}%
+   \ifnum \c@secnumdepth >\m@ne
+     \huge\scshape \@chapapp\space \thechapter
+     \par\nobreak
+     \vskip 20\p@
+   \fi
+   \interlinepenalty\@M
+   \Huge \scshape #1\par
+   \vspace{5pt}%
+   \hrule
+   \nobreak
+   \vskip 40\p@
+  }
+}
+\end{comment}
+
+%-----------------------------------------------------------------------
