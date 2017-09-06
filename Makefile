@@ -40,6 +40,7 @@ $(THESIS_S): $(SUB_THESIS_S)
 $(THESIS_PDF): $(THESIS_S) $(SUB_THESIS_S)
 	lualatex $(THESIS)
 	bibtex $(THESIS)
+	bibtex $(THESIS)
 	lualatex $(THESIS)
 	lualatex $(THESIS)
 	@./makeProgress.sh
