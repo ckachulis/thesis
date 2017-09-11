@@ -10,17 +10,28 @@ The Cherenkov radiation is emitted from the path of the charged particle along a
 \cos \theta_C=\frac{1}{\beta n}.
 \label{eq:cherenkov_angle}
 \end{equation}
-A detailed derivation of these formula based on electrodynamics can be found in \cite{Jackson:1998nia}.
+A detailed derivation of these formula based on electrodynamics can be found in \cite{Jackson:1998nia}.\par
 \begin{figure}
 \centering
 \includegraphics[width=0.8\textwidth]{figures/Cherenkov_radiation.png}
 \caption{Constructive interference resulting in Cherenkov radiation.}
 \label{fig:cherenkovradiation}
 \end{figure}
-The index of refraction of water is 1.34, so for charged particles in water the cherenkov threshold corresponds to $\beta>0.75$.  This can be translated to a momentum threshold of $p>1.13m$, which equates to a momentum threshold of 577 KeV/c for electrons, 119 MeV/c for muons, 157 MeV/c for charged pions, and 1.058 GeV/c for protons.  The cherenkov angle for a highly relativistic charge particle in water ($\gamma \gg 1$) of about 42$^\circ$.  \par
+The index of refraction of water is 1.33, so for charged particles in water the Cherenkov threshold corresponds to $\beta>0.75$.  This can be translated to a momentum threshold of $p>1.13m$, which equates to a momentum threshold of 577 KeV/c for electrons, 119 MeV/c for muons, 157 MeV/c for charged pions, and 1.058 GeV/c for protons.  The cherenkov angle for a highly relativistic charge particle in water ($\gamma \gg 1$) of about 42$^\circ$.  \par
 The emitted spectrum is described by the formula\cite{Olive:2016xmw}:
  \begin{equation}
 \frac{d^2N}{d\lambda dx}=\frac{2\pi \alpha z^2}{\lambda^2}\left(1-\frac{1}{\beta^2\n^2(\lambda)}\right)
 \label{eq:cherenkov_spectrum}
 \end{equation}
-where $\alpha$ is the fine structure constant, $z$ is the charge of the particle (in units of electron charge), $\lambda$ is the wavelength of the emitted light, and $x$ is the distance traveled by the charged particle.  It should be noted that whil this formula allows for a wavelength dependent index of refraction, the index of refraction of water is quite stable of the range of wavelengths observed by PMTs.   
+where $\alpha$ is the fine structure constant, $z$ is the charge of the particle (in units of electron charge), $\lambda$ is the wavelength of the emitted light, and $x$ is the distance traveled by the charged particle.  It should be noted that while this formula allows for a wavelength dependent index of refraction, the index of refraction of water is quite stable in the range of wavelengths observed by PMTs.\par
+In SK, Cherenkov radiation is observed as rings of hit PMTs, as shown in \cref{fig:cherenkov_cone}.  The timing of hits can be used to reconstruct the position of the interaction, and the orientation of the ring indicates the direction of travel of the charged particle.  Further, as can be seen from \cref{eq:cherenkov_spectrum}, the number of Cherenkov photons produced is a linear (as long as the particle is highly relativistic) function of the path length of the particle.  Since the path length (or shower depth, in the case of an electron) is directly translatable to the energy of the charged particle, the amount of Cherenkov light can be used to reconstruct charge particle energy.  Event reconstruction will be discussed in detail in \cref{ch:event_reconstruction}. 
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{figures/cherenkov_ring_piotr.png}
+\caption{Visualization of a Cherenkov ring in SK.  The inset shows a neutrino entering the detector, interacting in the inner detector, and the Cherenkov cone from the resulting relativistic charged particle. \cite{Mijakowski:2011zz}}
+\label{fig:cherenkov_cone}
+\end{figure}
+
+   

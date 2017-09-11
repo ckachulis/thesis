@@ -1,0 +1,95 @@
+%***************************************************
+% begin preamble
+
+%------------------------------------------
+% declare the document class
+
+\documentclass[12pt,oneside,openright]{article}
+
+% packages used
+\input{preamble/packages}
+
+% formatting specifications
+\input{preamble/formatting}
+
+% shorthand notations
+\input{preamble/shorthands}
+
+% make a list of files used
+\listfiles
+
+%***************************************************
+% begin document
+\singlespace
+\begin{document}
+
+% page number at bottom
+\pagestyle{plain}
+
+% use roman numbers
+\pagenumbering{roman}
+
+% set to page 1
+\setcounter{page}{1}
+
+
+\title{\bf Atmospheric Neutrinos and Boosted Dark Matter at Super Kamiokande}
+\author{Christopher J. Kachulis}
+\maketitle
+
+Neutrino oscillations have now been established for some time.  These oscillations were first observed as the ``solar neutrino problem" in the 1960's, when Ray Davis and John Bahcall measured the flux of solar neutrinos, and found a smaller flux than predicted.  It was finally confirmed around the turn of the 21st century that neutrino oscillations were the cause of the solar neutrino problem by measurements of atmospheric neutrinos at Super-Kamiokande (SK) and solar neutrinos at SK and the Sudbury Neutrino Observatory (SNO).  \par
+The theory of neutrino oscillations starts with weak interaction neutrino eigenstates are different from neutrino eighenstates.  The flavor eigenstates $\nu_\alpha$ are related to the mass eigenstates $\nu_i$ by
+\begin{equation}
+\ket{\nu_{\alpha}}=\sum_i^3 U_{\alpha,i}^* \ket{\nu_i},
+\label{eqn:flav-mass}
+\end{equation}
+where U is the 3x3 Pontecorvo-Maki-Nakagawa-Sakata (PMNS) matrix
+\begin{equation}
+\textbf{U}=\begin{pmatrix}
+1 & 0 & 0\\
+0 & c_{23} & s_{23} \\
+0 & -s_{23} & c_{23} \end{pmatrix} 
+\begin{pmatrix}
+c_{13} & 0 & s_{13}e^{-i\delta_{cp}}\\
+0 & 1 & 0 \\
+-s_{13}e^{i\delta_{cp}} & 0 & c_{13} \end{pmatrix}
+\begin{pmatrix}
+c_{12} & s_{12} & 0\\
+-s_{12} & c_{12} & 0 \\
+0 & 0 & 1 \end{pmatrix}
+\label{eqn:pmns}
+\end{equation}
+%
+%
+Here $c_{ij}=\cos{\theta_{ij}} , s_{ij}=\sin{\theta_{ij}}$.  Propagation of these states according to their vacuum Hamiltonians leads to the standard oscillation formula for relativistic neutrinos in vacuum
+\begin{multline}
+P(\nu_{\alpha} \rightarrow \nu_{\beta})= \delta_{\alpha\beta}-4\sum_{i>j} \Re(U_{\alpha i}^*U_{\beta i}U_{\alpha j}U_{\beta j}^*)\sin^2 \Delta_{ij} \\ \pm 2\sum_{i>j} \Im(U_{\alpha i}^*U_{\beta i}U_{\alpha j}U_{\beta j}^*)\sin 2\Delta_{ij}
+\label{eqn:oscprob}
+\end{multline}
+where $$ \Delta_{ij}=\frac{1.27 \Delta m_{ij}^2 (\textrm{eV}^2) L(\textrm{km}^2)}{E (\textrm{GeV})} $$ and the sign before the second summation is positive for neutrinos and negative for anti-neutrinos.
+Neutrino oscillations in vacuum are thus fully described by 6 parameters: the 3 mixing angles $\theta_{13}, \theta_{12}, \theta_{23}$, the two mass splittings $\Delta m_{21}^2, \Delta m_{31}^2$, and the CP violating phase $\delta_{cp}$.  Of these parameters, $\theta_{13}, \theta_{12}, \Delta m_{21}^2,$ and $|\Delta m_{31}^2|$ have been measured to high precision.  The parameter $\theta_{23}$ has also been measured, but a larger uncertainty remains in its value than in the other two mixing angles.  The parameter $\delta_{cp}$ and the sign of $\Delta m_{31}^2$ remain essentially unknown.  The sign of $\Delta m_{31}^2$ is often referred to as the mass hierarchy (or mass ordering), because it's sign indicates whether the hierarchy is of the form $m_1<m_2<m_3$ (normal), or $m_3<m_1<m_2$ (inverted).\par
+At Super-Kamiokande, we can probe these three unkowns of neutrino oscillation using our atmospheric neutrino measurements.   Our low energy (``Sub-GeV") ``e-like" samples are sensitive to the value of $\delta_{cp}$, as value closer to $\pi/2$ predict less $\nu_\mu \rightarrow \nu_e$ oscillation, while values closer to $3\pi/2$ predict more $\nu_\mu \rightarrow \nu_e$ oscillation.  Our higher energy (``Multi-GeV") ``$\mu$-like" samples are sensitive to the value of $\sin^2 \theta_{23}$, as values closer to 0.4 predict more $\nu_\mu$ survival, while values closer to 0.6 predict less $\nu_\mu$ survival.  Finally, our Multi-GeV e-like samples are sensitive to the mass hierarchy through matter effects.  When neutrinos travel through matter, the effective Hamiltonian is modified from its vacuum form due to coherent $\nu_e$-electron scattering (presented here in mass eigenstate basis):
+\begin{equation}
+H_{\textrm{matter}}=\begin{pmatrix}\frac{m_1^2}{2E}&0&0\\0&\frac{m_2^2}{2E}&0\\0&0&\frac{m_3^2}{2E} \end{pmatrix}  + U^\dagger\begin{pmatrix}a&0&0\\0&0&0\\0&0&0\end{pmatrix}U
+\label{eqn:hamiltonian_matter}
+\end{equation}
+where $a=\pm\sqrt{2}G_FN_e$, $G_f$ is the Fermi constant, $N_e$ is the electron density, $U$ is the PMNS matrix, and the plus (minus) sign is for neutrinos (antineutrinos).  This results in a resonant enhancement in the $\nu_\mu \rightarrow \nu_e$ oscillation for neutrinos with energies around 5 to 10 GeV crossing the mantle of the Earth.  Importantly, the enhancement occurs for \emph{either} neutrinos or antineutrinos, depending on the hierarchy.  Although SK is not directly sensitive to lepton charge, samples can be created which are more or less populated with neutrinos or antineutrinos.  In this way, by looking at which samples this resonance is observed in, we can attempt to extract a hierarchy preference from SK data.  \par
+SK can also be used for astrophysical searches, often particular in reference to dark matter.  While there has long been ample evidence of the existence of dark matter, the specific properties and identity of dark matter remain elusive.  The $\Lambda$CDM cosmology, which consists of long lived dark matter which is non-relativistic (``cold") at current times and a cosmological constant $\Lambda$ which corresponds to dark energy, has been well supported by cosmological observations.  Under this cosmology, the dark matter abundance has been measured by Planck and WMAP through observation of the Cosmic Microwave Background (CMB) to account for about 25\% of the energy density of the universe.  However, beyond it's existence and abundance, little else is known about the properties of dark matter.  A promising possible cold dark matter particle is the Weakly Interacting Massive Particle (WIMP), but thus far attempts at it's direct detection have left such a particle undiscovered. Indirect detection searches for dark matter through the detection of it's standard model annihilation products, as well as searches for dark matter produced at particle accelerators have thus far similarly produced null results.\par   
+In contrast to cold dark matter, boosted dark matter is relativistic dark matter which has been produced at late times.  Models including boosted dark matter have been recently introduced and discussed in multiple theory papers.  These models remain consistent with $\Lambda$CDM by proposing boosted dark matter as a subdominant dark matter component, with a dominant cold dark matter component accounting for most of the dark matter energy density of the universe.  The subdominant boosted dark matter can be the same particle as the dominant cold dark matter, or it can be a different, lighter particle.  In these models, boosted dark matter can be produced from the dominant cold dark matter through multiple processes, including annihilation, semi-annihilation, 3$\rightarrow$2 self-annihilation, and decay.  Boosted dark matter can then be observed scattering electrons or nuclei in large volume terrestrial detectors.  Current direct detection limits can be evaded in multi-component models by having only the boosted dark matter species couple directly to standard matter or in single-component models by invoking a spin dependent dark matter-nucleon cross section. \par
+We can search for boosted dark matter in SK by looking for elastically scattered electrons with energies greater ranging from 100 MeV to 1 TeV.  This is a class of events that has never before been studied at SK; while elastically scattered electrons have been studied extensively in the solar neutrino energy range (1-10 MeV), the neutrino-nucleus cross section dominates the neutrino-electron cross section for neutrinos above 100 MeV.  Since boosted dark matter is likely to originate in regions of high dark matter density, we look for elastically scattered electrons which point back to the galactic center.  We select events which could be elastically scattered electrons with a simple cuts-based approach, using standard SK reconstruction variables.  We count the number of events in cones of different size around the galactic center, and compares these counts to the expected background from atmospheric neutrinos.  The background is estimated by counting events in sidebands at the same declination as the cones around the galactic center, which gives us a completely data driven, MC free background estimate.  The analysis is purposefully kept simple and model independent so that our results can be easily adapted to any particular boosted dark matter model.\par
+\newpage
+\bf{Thesis Outline}
+\begin{enumerate}
+\item Introduction
+	\begin{itemize} 
+	\item History of Neutrinos 
+		\begin{itemize}
+		\item A brief history of neutrino physics.  Proposal by Pauli, discovery, solar neutrino problem, discovery of oscillation. 
+		\begin{itemize}
+	\item History of Dark Matter
+		\begin{itemize}
+		\item A brief history of dark matter physics.  Galactic rotation curves, bullet cluster, null results so far
+		\end{itemize}
+	\end{itemize}   
+\end{enumerate}
+\end{document}

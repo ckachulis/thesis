@@ -4,6 +4,12 @@ THESIS_PDF=$(THESIS).pdf
 
 THESIS_S=$(THESIS).tex
 
+PROSPECTUS=prospectus
+
+PROSPECTUS_PDF=$(PROSPECTUS).pdf
+
+PROSPECTUS_S=$(PROSPECTUS).tex
+
 
 
 #preamble stuff
@@ -43,13 +49,16 @@ SUB_THESIS_S +=sk_detector/overview.tex
 SUB_THESIS_S +=sk_detector/pmts.tex
 SUB_THESIS_S +=sk_detector/tank.tex
 SUB_THESIS_S +=sk_detector/water_system.tex
+#event reconstruction
+SUB_THESIS_S +=event_reconstruction/event_reconstruction.tex
+
 #cv?
 SUB_THESIS_S += cv/cv.tex
 
 #bib
 SUB_THESIS_S += bibliography.bib
 
-all: $(THESIS_PDF) 
+all: $(THESIS_PDF) $(PROSPECTUS_PDF)
 
 $(THESIS_S): $(SUB_THESIS_S)
 	@echo Checking child tex file	
@@ -62,6 +71,16 @@ $(THESIS_PDF): $(THESIS_S) $(SUB_THESIS_S)
 	lualatex $(THESIS)
 	lualatex $(THESIS)
 	@./makeProgress.sh
+
+$(PROSPECTUS_S): $(SUB_PROSPECTUS_S)
+	@echo Checking child tex file	
+
+
+$(PROSPECTUS_PDF): $(PROSPECTUS_S) $(SUB_PROSPECTUS_S)
+	lualatex $(PROSPECTUS)
+	lualatex $(PROSPECTUS)
+
+
 progress: $(THESIS_PDF)
 	@./makeProgress.sh
 
