@@ -9,9 +9,9 @@ set format x "%Y/%m"
 set xrange["1504224000":"1525132800"]
 set yrange[0:200]
 set y2range[0:]
+set xlabel "Date"
 
-
-plot "progress.dat" using 1:2 with lines axis x1y1 title "Page count"
+plot "progress.dat" using 1:2 with lines axis x1y1 title "Page count" 
 replot "progress.dat" using 1:($3/(1048576)) with lines axis x1y2 title "File size"
 
 #set term pdf size 10,6 fsize 16 lw 8
