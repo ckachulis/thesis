@@ -52,6 +52,9 @@ SUB_THESIS_S +=sk_detector/water_system.tex
 #event reconstruction
 SUB_THESIS_S +=event_reconstruction/event_reconstruction.tex
 
+#data processing
+SUB_THESIS_S +=data_processing/data_processing.tex
+
 #cv?
 SUB_THESIS_S += cv/cv.tex
 
