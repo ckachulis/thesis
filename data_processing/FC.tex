@@ -1,0 +1,20 @@
+\section{Fully Contained Reduction}
+\label{sec:FC}
+The FC data reduction consists of five steps, labeled FC1-FC5.  Combined, they select around 10 events per day from the $10^6$ events recorded by SK, with an efficiency for selecting events which originate in the FV of about 98\%.  In the following descriptions, events which pass the cuts listed are the events which make up the FC sample.
+\subsection{FC1}
+FC1 consists of a two simple cuts:
+\begin{itemize}
+\item The number of pe in a 300 ns sliding time window in the ID is greater than 200 (100 for SK-II)
+\item There are fewer than 50 (55 for SK-IV) OD tubes hit.
+\end{itemize}
+The first cut removes low energy radioactive background events and solar neutrinos, while the second cut removes obvious cosmic ray muon and PC or UPMU events.  Of the $10^6$ events recorded by SK each day, about 2,500 pass FC1.
+
+\subsection{FC2}
+FC2 also consists of two simple cuts:
+\begin{itemize}
+\item No ID PMT can be responsible for greater than 50\% of the pe observed in the ID
+\item If the number of pe in the ID is less than 100,000 (50,000 for SK-II), there must be fewer than 25 hits in the OD (30 for SK-IV)
+\end{itemize}
+This first cut removes electrical noise events where a single large pulse on one PMT accounts for most of the measured ID charge.  The second cut is a stricter version of the second FC1 cut, but allows for situations where a very high energy event which is contained to the ID may have more hits than lower energy events in the ID, due to electrical cross-talk between channels.  Of the about 2,500 events which pass FC1 each day, about 500 pass FC2.
+
+\subsection{FC3}

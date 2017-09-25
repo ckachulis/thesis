@@ -1,2 +1,14 @@
 \chapter{Data Processing}
 \label{ch:data_processing}
+\graphicspath{{data_processing/}}
+Super-Kamiokande records around $10^6$ events per day.  However, the vast majority of these events are either low energy radioactive backgrounds (~11 Hz) or cosmic ray muons (~3 Hz).  For comparison, the rate of atmospheric neutrino interactions in SK is about 10 per day.  Data reduction processes are used to select only the reatively small number of interesting physics events.  In the high energy range ($>100 MeV$), three samples are used, each selected by a separate data reduction process:
+\begin{itemize}
+\item Fully Contained (FC):  These are events with activity in the ID and no activity in the OD.  These events are the best reconstructed, since all the energy of the event is contained within the ID.
+\item Partically Contained (PC):  These are events with activity in both the ID and OD, but where it has been determined that this is due to a particle starting in the ID and exiting into the OD.  These events are almost all muons, since most electromagnetic showers will not have the energy to puncture from the FV into the OD.  These events are more poorly reconstructed than FC events, since much of their energy can be deposited outside the ID, and even outside the OD.
+\item Upward Going Muons (UPMU):  These are events with activity in both the ID and the OD, where the event starts in the OD, but where the event is coming from below the detector.  Since these events come from below, the Earth itself is acting as a shield for the detector.  The events are thus due to neutrinos interacting in the rock below the detector.
+\end{itemize}
+
+In this chapter, I will discuss all three of these reduction samples.
+\input{data_processing/FC}
+\input{data_processing/PC}
+\input{data_processing/UPMU}
