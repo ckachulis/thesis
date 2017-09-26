@@ -54,7 +54,9 @@ SUB_THESIS_S +=event_reconstruction/event_reconstruction.tex
 
 #data processing
 SUB_THESIS_S +=data_processing/data_processing.tex
-
+SUB_THESIS_S +=data_processing/FC.tex
+SUB_THESIS_S +=data_processing/PC.tex
+SUB_THESIS_S +=data_processing/UPMU.tex
 #cv?
 SUB_THESIS_S += cv/cv.tex
 
